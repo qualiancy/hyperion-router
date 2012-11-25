@@ -1,0 +1,15 @@
+{
+    "name": "hyperion-router"
+  , "repo": "qualiancy/hyperion-router"
+  , "version": "0.0.0"
+  , "description": "HTTP router for node.js and the browser."
+  , "license": "MIT"
+  , "keywords": [
+    ]
+  , "main": "lib/router.js"
+  , "scripts": [
+        "lib/router.js"
+    ]
+  , "dependencies": {}
+  , "development": {}
+}
