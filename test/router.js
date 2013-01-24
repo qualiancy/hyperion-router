@@ -30,7 +30,7 @@ describe('Router', function () {
       var cb = chai.spy(function (req, res, next) {
         arguments.should.have.length(3);
         req.should.have.property('method', 'GET');
-        req.should.have.property('path', '/');
+        req.should.have.property('url', '/');
         req.should.have.property('index', 0);
         req.should.have.property('params')
           .deep.equal({});
@@ -43,7 +43,7 @@ describe('Router', function () {
 
       var req = {
           method: 'GET'
-        , path: '/'
+        , url: '/'
       };
 
       app.dispatch(req, {}, function (err, result) {
@@ -59,7 +59,7 @@ describe('Router', function () {
       var cb = chai.spy(function (req, next) {
         arguments.should.have.length(2);
         req.should.have.property('method', 'GET');
-        req.should.have.property('path', '/');
+        req.should.have.property('url', '/');
         req.should.have.property('index', 0);
         req.should.have.property('params')
           .deep.equal({});
@@ -71,7 +71,7 @@ describe('Router', function () {
 
       var req = {
           method: 'GET'
-        , path: '/'
+        , url: '/'
       };
 
       app.dispatch(req, function (err, result) {
@@ -96,7 +96,7 @@ describe('Router', function () {
 
       var req = {
           method: 'GET'
-        , path: '/'
+        , url: '/'
       };
 
       map('/', cb);
@@ -125,7 +125,7 @@ describe('Router', function () {
 
       var req = {
           method: 'POST'
-        , path: '/'
+        , url: '/'
       };
 
       map.get('/', get);
@@ -159,7 +159,7 @@ describe('Router', function () {
 
       var req = {
           method: 'GET'
-        , path: '/ping'
+        , url: '/ping'
       };
 
       app.dispatch(req, function (err, result) {
