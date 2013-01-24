@@ -9,7 +9,17 @@
   , "main": "lib/router.js"
   , "scripts": [
         "lib/router.js"
+      , "lib/router/index.js"
+      , "lib/router/methods.js"
+      , "lib/router/route.js"
     ]
-  , "dependencies": {}
+  , "dependencies": {
+        "qualiancy/drip": "1.1.0"
+      , "qualiancy/hyperion-parse-path": "0.2.0"
+      , "qualiancy/tea-extend": "0.2.0"
+      , "qualiancy/tea-inherits": "0.1.0"
+      , "qualiancy/tea-type": "0.1.0"
+      , "qualiancy/sherlock": "1.0.0"
+    }
   , "development": {}
 }

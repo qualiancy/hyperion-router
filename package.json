@@ -18,9 +18,16 @@
       "test": "make test"
     }
   , "dependencies": {
+        "drip": "1.1.0"
+      , "hyperion-parse-path": "0.2.0"
+      , "tea-extend": "0.2.0"
+      , "tea-inherits": "0.1.0"
+      , "tea-type": "0.1.0"
+      , "sherlock": "1.0.0"
     }
   , "devDependencies": {
         "chai": "*"
+      , "chai-spies": "*"
       , "component": "*"
       , "mocha": "*"
       , "mocha-phantomjs": "*"
