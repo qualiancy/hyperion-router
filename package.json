@@ -1,6 +1,6 @@
 {
     "name": "hyperion-router"
-  , "version": "0.1.0"
+  , "version": "0.1.1"
   , "description": "HTTP router for node.js and the browser."
   , "author": "Jake Luer <jake@qualiancy.com> (http://qualiancy.com)"
   , "license": "MIT"
