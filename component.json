@@ -1,7 +1,7 @@
 {
     "name": "hyperion-router"
   , "repo": "qualiancy/hyperion-router"
-  , "version": "0.0.0"
+  , "version": "0.1.0"
   , "description": "HTTP router for node.js and the browser."
   , "license": "MIT"
   , "keywords": [
@@ -16,10 +16,10 @@
   , "dependencies": {
         "qualiancy/drip": "1.1.0"
       , "qualiancy/hyperion-parse-path": "0.2.0"
+      , "qualiancy/sherlock": "1.0.0"
       , "qualiancy/tea-extend": "0.2.0"
       , "qualiancy/tea-inherits": "0.1.0"
       , "qualiancy/tea-type": "0.1.0"
-      , "qualiancy/sherlock": "1.0.0"
     }
   , "development": {}
 }
