@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
     <script src="../../node_modules/mocha/mocha.js"></script>
     <script src="../../node_modules/chai/chai.js"></script>
+    <script src="../../node_modules/chai-spies/chai-spies.js"></script>
     <script>
       mocha.setup('bdd')
       var should = chai.should();
@@ -13,8 +14,12 @@
     <script src="../../build/build.js"></script>
     <script>
       router = require('hyperion-router');
+      __router = {
+        methods: require('hyperion-router/lib/router/methods.js')
+      }
     </script>
-    <!-- <script src="../test.js"></script> -->
+    <script src="../route.js"></script>
+    <script src="../router.js"></script>
     <script>onload = function () {
       if (window.mochaPhantomJS) mochaPhantomJS.run()
       else mocha.run();

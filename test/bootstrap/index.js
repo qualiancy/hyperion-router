@@ -9,7 +9,7 @@ global.should = global.chai.should();
  * Chai Plugins
  */
 
-//global.chai.use(require('chai-spies'));
+global.chai.use(require('chai-spies'));
 //global.chai.use(require('chai-http'));
 
 /*!
@@ -32,4 +32,6 @@ function req (name) {
  * Load unexposed modules for unit tests
  */
 
-global.__router = {};
+global.__router = {
+    methods: req('methods')
+};
