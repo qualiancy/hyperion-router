@@ -1,4 +1,10 @@
 
+0.1.3 / 2013-01-30 
+==================
+
+  * test: [route#params] test for empty keys return
+  * route: [params] return empty params if no keys defined
+
 0.1.1 / 2013-01-23 
 ==================
 
