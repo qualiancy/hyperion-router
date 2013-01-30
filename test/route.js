@@ -12,6 +12,12 @@ describe('Route', function () {
       blog.match('/').should.be.false;
       blog.match('/blog').should.be.true;
     });
+
+    it('should match a regexp route', function () {
+      var pull = app.addRoute('get', /\/([^\/]+)\/info\/refs$/, noop);
+      pull.match('/repo/subrepo/info/refs').should.be.true;
+      pull.match('/repo/subrepo/HEAD').should.be.false;
+    });
   });
 
   describe('.params()', function () {
@@ -35,6 +41,15 @@ describe('Route', function () {
         .should.deep.equal({ path: 'user', format: 'json' });
       json.params('/api/user')
         .should.deep.equal({ path: 'user', format: null });
+    });
+
+    it('should handle regexp parsing as key', function () {
+      var pull = app.addRoute('get', /\/([^\/]+)\/info\/refs$/, noop)
+        , push = app.addRoute('post', /\/([^\/]+)\/git-(.+)/, noop);
+      pull.params('/repo/info/refs')
+        .should.deep.equal([ 'repo' ]);
+      push.params('/repo/git-upload-pack')
+        .should.deep.equal([ 'repo', 'upload-pack' ]);
     });
   });
 });
