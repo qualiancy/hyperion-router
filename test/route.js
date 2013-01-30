@@ -51,5 +51,16 @@ describe('Route', function () {
       push.params('/repo/git-upload-pack')
         .should.deep.equal([ 'repo', 'upload-pack' ]);
     });
+
+    it('should not throw when no keys are available', function () {
+      var notes = app.addRoute('get', '*', noop)
+        , params;
+
+      (function () {
+        params = notes.params('/notes');
+      }).should.not.throw();
+
+      params.should.deep.equal({});
+    });
   });
 });
